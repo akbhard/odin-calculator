@@ -1,17 +1,16 @@
-let numberOne = 9
-let numberTwo = 3
-let operator = "*"
+let numbers = []
+let operator = "/"
 
-const operate = function (numberOne, numberTwo, operator) {
+const operate = function (numbers, operator) {
     if (operator === "+") {
-        return numberOne + numberTwo
+        return (numbers[0] + numbers[1]).toFixed(2)
     } else if (operator === "-") {
-        return numberOne - numberTwo
+        return (numbers[0] - numbers[1]).toFixed(2)
     } else if (operator === "*") {
-        return numberOne * numberTwo
+        return (numbers[0] * numbers[1]).toFixed(2)
     } else if (operator === "/") {
-        return numberOne/numberTwo
+        return (numbers[0]/numbers[1]).toFixed(2)
     }
 }
 
-console.log(operate(numberOne, numberTwo, operator))
+console.log(operate(numbers, operator))
