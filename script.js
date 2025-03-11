@@ -17,7 +17,7 @@ const getNumber = (number) => {
         numberTwo += number
         numbers[1] = Number(numberTwo)
     }
-    return numbers
+    console.log(numbers)
 }
 
 const getOperator = (op) => {
@@ -27,37 +27,28 @@ const getOperator = (op) => {
 
 const operate = () => {
     if (operator === "+") {
-        return (numbers[0] + numbers[1]).toFixed(2)
+        sum = (numbers[0] + numbers[1]).toFixed(2)
     } else if (operator === "-") {
-        return (numbers[0] - numbers[1]).toFixed(2)
+        sum = (numbers[0] - numbers[1]).toFixed(2)
     } else if (operator === "*") {
-        return (numbers[0] * numbers[1]).toFixed(2)
+        sum = (numbers[0] * numbers[1]).toFixed(2)
     } else if (operator === "/") {
-        return (numbers[0]/numbers[1]).toFixed(2)
+        sum = (numbers[0]/numbers[1]).toFixed(2)
     }
+    return sum
 }
 
 const clear = () => {
     numberOne = ""
     numberTwo = ""
-    numbers = []
+    numbers[0] = 0
+    numbers[1] = 0
     step = 0
-    operator = []
+    operator = ""
 }
 
-// getNumber(9)
-// getNumber(7)
-// getOperator("/")
-// getNumber(1)
-// console.log(numbers)
-// console.log(operate())
-// clear()
-// console.log(numbers)
-// console.log(step)
-// getNumber(4)
-// getNumber(2)
-// getNumber(2)
-// getOperator("*")
-// getNumber(3)
-// console.log(numbers)
-// console.log(operate())
+const clearButtonClicked = () => {
+    clear();
+    // console.log(`Numbers: ${numbers}`);
+    // console.log(`Step is: ${step}`) 
+}
